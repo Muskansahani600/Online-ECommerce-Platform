@@ -2,3 +2,5 @@ web/WEB-INF/classes/
 web/WEB-INF/lib/
 lib/*.jar
 *.class
+
+.tomcat-path.txt
