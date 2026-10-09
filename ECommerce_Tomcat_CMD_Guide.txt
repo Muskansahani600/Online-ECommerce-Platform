@@ -1,0 +1,47 @@
+ONLINE E-COMMERCE PLATFORM - TOMCAT CMD GUIDE (WINDOWS)
+======================================================
+
+1) FIND TOMCAT INSTALLATION
+---------------------------
+Open Command Prompt (CMD) and run:
+
+where /r "C:\Program Files" catalina.bat
+
+If not found, also try:
+
+where /r "C:\" catalina.bat
+
+The folder containing catalina.bat is Tomcat's bin folder.
+Example: C:\Program Files\Apache Software Foundation\Tomcat 10.1\bin
+
+2) START TOMCAT (RUN CODE 1)
+----------------------------
+Replace the example path below with the bin folder found in Step 1:
+
+cd /d "C:\Program Files\Apache Software Foundation\Tomcat 10.1\bin"
+catalina.bat run
+
+Keep this CMD window open while using the website. This mode displays server errors.
+
+3) STOP TOMCAT (RUN CODE 2)
+---------------------------
+Open a SECOND CMD window and run:
+
+cd /d "C:\Program Files\Apache Software Foundation\Tomcat 10.1\bin"
+catalina.bat stop
+
+If Tomcat was started with 'catalina.bat run', you can alternatively press Ctrl+C in its original CMD window.
+
+4) OPEN YOUR E-COMMERCE WEBSITE
+-------------------------------
+Open http://localhost:8080/ in a browser.
+Your app may have a context path, such as:
+http://localhost:8080/YourAppName/
+
+IMPORTANT
+---------
+- Tomcat must already be installed and your E-Commerce web app deployed.
+- MySQL Server must be running, and your ecommerce_db database must exist.
+- The Java app needs the Jakarta Servlet dependencies and MySQL Connector/J.
+- If Tomcat is installed as a Windows service, service commands may be different.
+- The MySQL login popup, if integrated, appears on the PC running Tomcat.
